@@ -1,6 +1,10 @@
 """
 Example of RabbitMQ usage
 http://snakeproject.ru/rubric/article.php?art=%D0%BA%D1%8C%D0%B9_22072022
+
+asyncio rabbitmq
+https://github.com/mosquito/aiormq/
+https://github.com/mosquito/aio-pika
 """
 import pika
 
