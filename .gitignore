@@ -3,6 +3,7 @@
 *.code-workspace
 *.session
 __pycache__
+env
 bin
 lib
 lib64
