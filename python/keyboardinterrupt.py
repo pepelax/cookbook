@@ -4,6 +4,7 @@ and finish program correctly
 """
 
 def main():
+    """Program entry point"""
     try:
         print('Press Ctrl+C for exit...')
         while True:
