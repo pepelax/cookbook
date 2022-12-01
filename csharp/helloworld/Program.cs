@@ -4,6 +4,11 @@
 // See https://aka.ms/new-console-template for more information
 // https://learn.microsoft.com/ru-ru/dotnet/csharp/fundamentals/program-structure/top-level-statements
 
+// publish
+// dotnet publish -c Release -r win-x64 --self-contained -p:PublishReadyToRun=true
+// dotnet publish -c Release -r osx-x64 --self-contained -p:PublishReadyToRun=true
+// dotnet publish -c Release -r linux-x64 --no-self-contained -p:PublishReadyToRun=true
+
 using System.Text;
 
 // dotnet add package RabbitMQ.Client

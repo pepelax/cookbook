@@ -21,3 +21,8 @@ sudo rabbitmqctl list_queues
 
 # admin panel is available by
 echo http://your_server_ip:15672/
+
+# windows
+# rabbitmqctl add_user %RABBITMQ_USER% %RABBITMQ_PASSWORD%
+# rabbitmqctl set_user_tags %RABBITMQ_USER% administrator
+# rabbitmqctl set_permissions -p / %RABBITMQ_USER% ".*" ".*" ".*"
