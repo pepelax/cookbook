@@ -4,6 +4,7 @@ sudo apt install slim -y
 sudo apt install ubuntu-desktop -y
 sudo service slim start
 
+sudo apt install winehq -y
 sudo apt install wine32 -y
 sudo apt install winbind -y
 
