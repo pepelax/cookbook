@@ -182,3 +182,6 @@ sudo lsblk
 # sudo nano /etc/fstab
 
 iptables -t nat -A PREROUTING -p tcp -s 37.140.195.134 --dport 1338 -j DNAT --to-destination 5.141.84.6:1338
+
+# who listens port
+lsof -i :8000
