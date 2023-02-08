@@ -7,3 +7,5 @@ sudo iptables -t nat -A POSTROUTING ! -o docker0 -s 172.17.0.0/16 -j MASQUERADE
 
 sysctl net.ipv4.conf.all.forwarding=1
 sudo iptables -P FORWARD ACCEPT
+
+sudo docker run -it alpine ping www.google.com
