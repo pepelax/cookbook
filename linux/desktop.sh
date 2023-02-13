@@ -1,16 +1,30 @@
 # install gui to ubuntu server
 sudo apt update && sudo apt upgrade -y
-sudo apt install slim -y
-sudo apt install ubuntu-desktop -y
+sudo apt install -y xfce4 xrdp
+# sudo apt install ubuntu-desktop -y
+# sudo apt install ubuntu-mate-desktop -y
+# sudo apt install cinnamon-desktop-environment 
+# sudo apt install xfce4 -y
 sudo service slim start
+
+echo xfce4-session > ~/.xsession
+# echo cinnamon-session > ~/.xsession
+
+# xfce4-panel -r
+
+sudo apt install xrdp -y
+sudo adduser xrdp ssl-cert
+sudo systemctl enable xrdp
+sudo ufw allow 3389
+sudo systemctl restart xrdp
 
 # Wine version to install: stable or devel
 WINE_VERSION="stable"
 
 # Prepare: switch to 32 bit and add Wine key
 sudo dpkg --add-architecture i386
-wget -nc https://dl.winehq.org/wine-builds/winehq.key
-sudo mv winehq.key /usr/share/keyrings/winehq-archive.key
+sudo mkdir -pm755 /etc/apt/keyrings
+sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
 
 # Get Ubuntu version and trim to major only
 OS_VER=$(lsb_release -r |cut -f2 |cut -d "." -f1)
@@ -29,24 +43,15 @@ elif (( $OS_VER < 20 )); then
   sudo mv winehq-bionic.sources /etc/apt/sources.list.d/
 fi
 
-sudo mkdir -pm755 /etc/apt/keyrings
-sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
-
 # Update package and install Wine
-sudo apt update
-sudo apt upgrade
-sudo apt install --install-recommends winehq-$WINE_VERSION
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y --install-recommends winehq-$WINE_VERSION
 
 sudo apt install -y \
-wine \
-wine32 \
-winbind
-
-sudo apt install xrdp -y
-sudo adduser xrdp ssl-cert
-sudo systemctl enable xrdp
-sudo ufw allow 3389
-sudo systemctl restart xrdp
+  wine \
+  wine32 \
+  wine64 \
+  winbind
 
 echo $DISPLAY
 # DISPLAY=:0 wine ...
