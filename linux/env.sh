@@ -2,6 +2,4 @@
 export MYVARNAME=VAL
 echo $MYVARNAME
 
-set -o allexport
-source conf-file
-set +o allexport
+set -o allexport && source conf-file && set +o allexport
