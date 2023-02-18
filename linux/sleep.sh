@@ -6,4 +6,4 @@ systemctl status hibernate.target
 systemctl status hybrid-sleep.target
 
 # disable sleep
-systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
