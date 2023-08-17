@@ -1,6 +1,6 @@
 # install gui to ubuntu server
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y xfce4 xrdp
+sudo apt install -y xfce4 xfce4-goodies xrdp
 # sudo apt install ubuntu-desktop -y
 # sudo apt install ubuntu-mate-desktop -y
 # sudo apt install cinnamon-desktop-environment 
