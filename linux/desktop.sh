@@ -19,3 +19,6 @@ sudo ufw allow 3389
 sudo systemctl restart xrdp
 
 # DISPLAY=:0 wine ...
+
+# xfce4 terminal
+sudo update-alternatives --config x-terminal-emulator
