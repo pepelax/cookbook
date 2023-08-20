@@ -1,5 +1,8 @@
 wget -nc https://dl.winehq.org/wine-builds/winehq.key
 sudo apt-key add winehq.key
+
+sudo apt install software-properties-common
+
 sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
 sudo dpkg --add-architecture i386
 sudo apt update
