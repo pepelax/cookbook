@@ -5,7 +5,7 @@ sudo apt install -y xfce4 xfce4-goodies xrdp
 # sudo apt install ubuntu-mate-desktop -y
 # sudo apt install cinnamon-desktop-environment 
 # sudo apt install xfce4 -y
-sudo service slim start
+# sudo service slim start
 
 echo xfce4-session > ~/.xsession
 # echo cinnamon-session > ~/.xsession
@@ -15,7 +15,7 @@ sudo dpkg-reconfigure locales
 
 # xfce4-panel -r
 
-sudo apt install xrdp -y
+# sudo apt install xrdp -y
 sudo adduser xrdp ssl-cert
 sudo systemctl enable xrdp
 sudo ufw allow 3389
