@@ -10,6 +10,9 @@ sudo service slim start
 echo xfce4-session > ~/.xsession
 # echo cinnamon-session > ~/.xsession
 
+sudo locale-gen en_US.UTF-8
+sudo dpkg-reconfigure locales
+
 # xfce4-panel -r
 
 sudo apt install xrdp -y
