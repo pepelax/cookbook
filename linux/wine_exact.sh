@@ -1,5 +1,10 @@
 wget -nc https://dl.winehq.org/wine-builds/winehq.key
-sudo apt-key add winehq.key
+
+# old way
+# sudo apt-key add winehq.key
+
+# new way
+sudo gpg --no-default-keyring --keyring /etc/apt/trusted.gpg.d/winehq.gpg --import winehq.key
 
 sudo apt install software-properties-common
 
