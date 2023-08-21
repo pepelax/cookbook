@@ -14,13 +14,11 @@ if (( $OS_VER >= 23)); then
 elif (( $OS_VER < 23 )) && (( $OS_VER >= 22 )); then
   sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/jammy/winehq-jammy.sources
 elif (( $OS_VER < 22 )) && (( $OS_VER >= 21 )); then
-  wget -nc https://dl.winehq.org/wine-builds/ubuntu/dists/impish/winehq-impish.sources
-  sudo mv winehq-impish.sources /etc/apt/sources.list.d/
+  sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/impish/winehq-impish.sources
 elif (( $OS_VER < 21 )) && (( $OS_VER >=20 )); then
   sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/focal/winehq-focal.sources
 elif (( $OS_VER < 20 )); then
-  wget -nc https://dl.winehq.org/wine-builds/ubuntu/dists/bionic/winehq-bionic.sources
-  sudo mv winehq-bionic.sources /etc/apt/sources.list.d/
+  sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/bionic/winehq-bionic.sources
 fi
 
 # Update package and install Wine
