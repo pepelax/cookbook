@@ -32,3 +32,7 @@ sudo nano /usr/share/polkit-1/actions/org.freedesktop.color.policy
 # Find the line that says <allow_any>auth_admin</allow_any> and change it to <allow_any>yes</allow_any>
 # Save and exit the file by pressing Ctrl+X, then Y, then Enter
 # Restart your system or xRDP service
+
+# if black screen occurs
+# remove .cache/sessions
+# htop -> sigterm xfce4
