@@ -36,3 +36,9 @@ sudo nano /usr/share/polkit-1/actions/org.freedesktop.color.policy
 # if black screen occurs
 # remove .cache/sessions
 # htop -> sigterm xfce4
+
+sudo apt-get purge xserver-xorg-legacy
+sudo apt remove xrdp vnc4server tightvncserver
+sudo apt-get update
+sudo apt-get dist-upgrade
+sudo apt-get install xrdp
