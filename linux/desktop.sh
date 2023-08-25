@@ -33,6 +33,10 @@ sudo nano /usr/share/polkit-1/actions/org.freedesktop.color.policy
 # Save and exit the file by pressing Ctrl+X, then Y, then Enter
 # Restart your system or xRDP service
 
+# prevent sleeping
+sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
+
 # if black screen occurs
 # remove .cache/sessions
 # htop -> sigterm xfce4
