@@ -10,5 +10,7 @@ sudo chmod 640 /etc/squid/passwd
 # Add users to the password file:
 sudo htpasswd -c /etc/squid/passwd username
 
+sudo nano /etc/squid/squid.conf
+
 sudo systemctl restart squid
 sudo ufw allow 3128/tcp
